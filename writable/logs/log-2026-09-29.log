@@ -1,0 +1,700 @@
+CRITICAL - 2026-09-29 15:26:41 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(55): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-29 15:26:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(55): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-29 15:26:51 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(55): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-29 15:30:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(55): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-29 16:36:09 --> CodeIgniter\Pager\Exceptions\PagerException: "bootstrap_full" is not a valid Pager template.
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Pager\Pager.php on line 124.
+ 1 SYSTEMPATH\Pager\Pager.php(124): CodeIgniter\Pager\Exceptions\PagerException::forInvalidTemplate('bootstrap_full')
+ 2 SYSTEMPATH\Pager\Pager.php(87): CodeIgniter\Pager\Pager->displayLinks('default', 'bootstrap_full')
+ 3 APPPATH\Views\home\index.php(181): CodeIgniter\Pager\Pager->links('default', 'bootstrap_full')
+ 4 SYSTEMPATH\View\View.php(234): include('D:\\XAMPP\\htdocs\\electric_demo\\app\\Views\\home\\index.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home/index', [], true)
+ 7 APPPATH\Controllers\Accounts.php(54): view('home/index', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-09-29 16:44:12 --> mysqli_sql_exception: Unknown column 'type' in 'where clause' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-09-29 16:44:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'type' in 'where clause'
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = :connection_type:
+OR `type` = :type:
+ )', [...], false)
+ 2 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-29 16:44:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'type' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = \'residential\'
+OR `type` = \'residential\'
+ )')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = \'residential\'
+OR `type` = \'residential\'
+ )')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = :connection_type:
+OR `type` = :type:
+ )', [...], false)
+ 4 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-29 16:44:12 --> [Caused by] mysqli_sql_exception: Unknown column 'type' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = \'residential\'
+OR `type` = \'residential\'
+ )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = \'residential\'
+OR `type` = \'residential\'
+ )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = \'residential\'
+OR `type` = \'residential\'
+ )')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = :connection_type:
+OR `type` = :type:
+ )', [...], false)
+ 5 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-09-29 16:44:16 --> mysqli_sql_exception: Unknown column 'type' in 'where clause' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-09-29 16:44:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'type' in 'where clause'
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = :connection_type:
+OR `type` = :type:
+ )', [...], false)
+ 2 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-29 16:44:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'type' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = \'commercial\'
+OR `type` = \'commercial\'
+ )')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = \'commercial\'
+OR `type` = \'commercial\'
+ )')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = :connection_type:
+OR `type` = :type:
+ )', [...], false)
+ 4 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-29 16:44:16 --> [Caused by] mysqli_sql_exception: Unknown column 'type' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = \'commercial\'
+OR `type` = \'commercial\'
+ )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = \'commercial\'
+OR `type` = \'commercial\'
+ )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = \'commercial\'
+OR `type` = \'commercial\'
+ )')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = :connection_type:
+OR `type` = :type:
+ )', [...], false)
+ 5 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-09-29 16:44:19 --> mysqli_sql_exception: Unknown column 'type' in 'where clause' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-09-29 16:44:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'type' in 'where clause'
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = :connection_type:
+OR `type` = :type:
+ )', [...], false)
+ 2 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-29 16:44:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'type' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = \'industrial\'
+OR `type` = \'industrial\'
+ )')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = \'industrial\'
+OR `type` = \'industrial\'
+ )')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = :connection_type:
+OR `type` = :type:
+ )', [...], false)
+ 4 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-29 16:44:19 --> [Caused by] mysqli_sql_exception: Unknown column 'type' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = \'industrial\'
+OR `type` = \'industrial\'
+ )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = \'industrial\'
+OR `type` = \'industrial\'
+ )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = \'industrial\'
+OR `type` = \'industrial\'
+ )')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`connection_type` = :connection_type:
+OR `type` = :type:
+ )', [...], false)
+ 5 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-09-29 16:44:22 --> mysqli_sql_exception: Unknown column 'type' in 'where clause' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-09-29 16:44:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'type' in 'where clause'
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE `status` = :status:
+AND   (
+`connection_type` = :connection_type:
+OR `type` = :type:
+ )', [...], false)
+ 2 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-29 16:44:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'type' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE `status` = \'active\'
+AND   (
+`connection_type` = \'industrial\'
+OR `type` = \'industrial\'
+ )')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE `status` = \'active\'
+AND   (
+`connection_type` = \'industrial\'
+OR `type` = \'industrial\'
+ )')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE `status` = :status:
+AND   (
+`connection_type` = :connection_type:
+OR `type` = :type:
+ )', [...], false)
+ 4 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-29 16:44:22 --> [Caused by] mysqli_sql_exception: Unknown column 'type' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE `status` = \'active\'
+AND   (
+`connection_type` = \'industrial\'
+OR `type` = \'industrial\'
+ )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE `status` = \'active\'
+AND   (
+`connection_type` = \'industrial\'
+OR `type` = \'industrial\'
+ )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE `status` = \'active\'
+AND   (
+`connection_type` = \'industrial\'
+OR `type` = \'industrial\'
+ )')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE `status` = :status:
+AND   (
+`connection_type` = :connection_type:
+OR `type` = :type:
+ )', [...], false)
+ 5 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-09-29 16:45:00 --> mysqli_sql_exception: Unknown column 'type' in 'where clause' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-09-29 16:45:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'type' in 'where clause'
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE `status` = :status:
+AND   (
+`connection_type` = :connection_type:
+OR `type` = :type:
+ )', [...], false)
+ 2 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-29 16:45:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'type' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE `status` = \'active\'
+AND   (
+`connection_type` = \'industrial\'
+OR `type` = \'industrial\'
+ )')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE `status` = \'active\'
+AND   (
+`connection_type` = \'industrial\'
+OR `type` = \'industrial\'
+ )')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE `status` = :status:
+AND   (
+`connection_type` = :connection_type:
+OR `type` = :type:
+ )', [...], false)
+ 4 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-29 16:45:00 --> [Caused by] mysqli_sql_exception: Unknown column 'type' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE `status` = \'active\'
+AND   (
+`connection_type` = \'industrial\'
+OR `type` = \'industrial\'
+ )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE `status` = \'active\'
+AND   (
+`connection_type` = \'industrial\'
+OR `type` = \'industrial\'
+ )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE `status` = \'active\'
+AND   (
+`connection_type` = \'industrial\'
+OR `type` = \'industrial\'
+ )')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE `status` = :status:
+AND   (
+`connection_type` = :connection_type:
+OR `type` = :type:
+ )', [...], false)
+ 5 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Accounts.php(48): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-09-29 16:50:16 --> mysqli_sql_exception: Unknown column 'first_name' in 'where clause' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-09-29 16:50:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'first_name' in 'where clause'
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )
+AND `status` = :status:
+AND `connection_type` = :connection_type:', [...], false)
+ 2 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-29 16:50:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'first_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+ )
+AND `status` = \'suspended\'
+AND `connection_type` = \'industrial\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+ )
+AND `status` = \'suspended\'
+AND `connection_type` = \'industrial\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )
+AND `status` = :status:
+AND `connection_type` = :connection_type:', [...], false)
+ 4 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-29 16:50:16 --> [Caused by] mysqli_sql_exception: Unknown column 'first_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+ )
+AND `status` = \'suspended\'
+AND `connection_type` = \'industrial\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+ )
+AND `status` = \'suspended\'
+AND `connection_type` = \'industrial\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0014%\' ESCAPE \'!\'
+ )
+AND `status` = \'suspended\'
+AND `connection_type` = \'industrial\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )
+AND `status` = :status:
+AND `connection_type` = :connection_type:', [...], false)
+ 5 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

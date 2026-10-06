@@ -1,0 +1,1692 @@
+ERROR - 2026-10-06 08:17:49 --> mysqli_sql_exception: Unknown column 'first_name' in 'where clause' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-10-06 08:17:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'first_name' in 'where clause'
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 2 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 08:17:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'first_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+ )')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+ )')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 4 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 08:17:49 --> [Caused by] mysqli_sql_exception: Unknown column 'first_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+ )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+ )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+ )')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 5 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 08:18:23 --> mysqli_sql_exception: Unknown column 'first_name' in 'where clause' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-10-06 08:18:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'first_name' in 'where clause'
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 2 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 08:18:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'first_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+ )')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+ )')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 4 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 08:18:23 --> [Caused by] mysqli_sql_exception: Unknown column 'first_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+ )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+ )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0021%\' ESCAPE \'!\'
+ )')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 5 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 08:44:56 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'electriccompany', 3306, '', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#6 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-10-06 08:44:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`', [], false)
+ 3 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 08:45:06 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'electriccompany', 3306, '', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#6 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-10-06 08:45:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`', [], false)
+ 3 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 08:45:22 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'electriccompany', 3306, '', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#6 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-10-06 08:45:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`', [], false)
+ 3 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 08:46:12 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'electriccompany', 3306, '', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#6 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-10-06 08:46:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`', [], false)
+ 3 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 08:52:46 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'electriccompany', 3306, '', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#6 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-10-06 08:52:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`', [], false)
+ 3 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 08:52:57 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'electriccompany', 3306, '', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#6 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-10-06 08:52:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`', [], false)
+ 3 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 08:53:39 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'electriccompany', 3306, '', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#6 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-10-06 08:53:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`', [], false)
+ 3 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 08:59:06 --> mysqli_sql_exception: Unknown column 'first_name' in 'where clause' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-10-06 08:59:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'first_name' in 'where clause'
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 2 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 08:59:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'first_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+ )')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+ )')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 4 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 08:59:06 --> [Caused by] mysqli_sql_exception: Unknown column 'first_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+ )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+ )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+OR  `email` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%EC-2024-0001%\' ESCAPE \'!\'
+ )')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 5 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 08:59:19 --> mysqli_sql_exception: Unknown column 'first_name' in 'where clause' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-10-06 08:59:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'first_name' in 'where clause'
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 2 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 08:59:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'first_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%John Smith%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%John Smith%\' ESCAPE \'!\'
+OR  `email` LIKE \'%John Smith%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%John Smith%\' ESCAPE \'!\'
+ )')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%John Smith%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%John Smith%\' ESCAPE \'!\'
+OR  `email` LIKE \'%John Smith%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%John Smith%\' ESCAPE \'!\'
+ )')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 4 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 08:59:19 --> [Caused by] mysqli_sql_exception: Unknown column 'first_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%John Smith%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%John Smith%\' ESCAPE \'!\'
+OR  `email` LIKE \'%John Smith%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%John Smith%\' ESCAPE \'!\'
+ )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%John Smith%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%John Smith%\' ESCAPE \'!\'
+OR  `email` LIKE \'%John Smith%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%John Smith%\' ESCAPE \'!\'
+ )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%John Smith%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%John Smith%\' ESCAPE \'!\'
+OR  `email` LIKE \'%John Smith%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%John Smith%\' ESCAPE \'!\'
+ )')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 5 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 08:59:25 --> mysqli_sql_exception: Unknown column 'first_name' in 'where clause' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-10-06 08:59:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'first_name' in 'where clause'
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 2 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 08:59:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'first_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+OR  `email` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+ )')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+OR  `email` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+ )')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 4 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 08:59:25 --> [Caused by] mysqli_sql_exception: Unknown column 'first_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+OR  `email` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+ )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+OR  `email` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+ )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+OR  `email` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%john.smith@email.com%\' ESCAPE \'!\'
+ )')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 5 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 08:59:34 --> mysqli_sql_exception: Unknown column 'first_name' in 'where clause' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-10-06 08:59:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'first_name' in 'where clause'
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 2 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 08:59:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'first_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `email` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%555-0101%\' ESCAPE \'!\'
+ )')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `email` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%555-0101%\' ESCAPE \'!\'
+ )')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 4 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 08:59:34 --> [Caused by] mysqli_sql_exception: Unknown column 'first_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `email` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%555-0101%\' ESCAPE \'!\'
+ )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `email` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%555-0101%\' ESCAPE \'!\'
+ )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `email` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%555-0101%\' ESCAPE \'!\'
+ )')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 5 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 09:00:02 --> mysqli_sql_exception: Unknown column 'first_name' in 'where clause' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+#7 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->index()
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-10-06 09:00:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'first_name' in 'where clause'
+[Method: GET, Route: accounts]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 2 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 09:00:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'first_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `email` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%555-0101%\' ESCAPE \'!\'
+ )')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `email` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%555-0101%\' ESCAPE \'!\'
+ )')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 4 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 09:00:02 --> [Caused by] mysqli_sql_exception: Unknown column 'first_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `email` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%555-0101%\' ESCAPE \'!\'
+ )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `email` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%555-0101%\' ESCAPE \'!\'
+ )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `last_name` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `email` LIKE \'%555-0101%\' ESCAPE \'!\'
+OR  `phone` LIKE \'%555-0101%\' ESCAPE \'!\'
+ )')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customer_accounts`
+WHERE   (
+`first_name` LIKE :first_name: ESCAPE \'!\'
+OR  `last_name` LIKE :last_name: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+OR  `phone` LIKE :phone: ESCAPE \'!\'
+ )', [...], false)
+ 5 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Accounts.php(45): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 11:47:43 --> mysqli_sql_exception: Duplicate entry 'EC-2024-0026' for key 'account_number' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `cu...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cu...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cu...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cu...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP\htdocs\electric_demo\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(164): CodeIgniter\Model->insert(Array)
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#10 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-10-06 11:47:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'EC-2024-0026' for key 'account_number'
+[Method: POST, Route: accounts/update/27]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 11:47:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'EC-2024-0026' for key 'account_number'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'commercial\', \'suspended\', \'2026-10-06 11:47:42\', \'2026-10-06 11:47:42\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'commercial\', \'suspended\', \'2026-10-06 11:47:42\', \'2026-10-06 11:47:42\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 11:47:43 --> [Caused by] mysqli_sql_exception: Duplicate entry 'EC-2024-0026' for key 'account_number'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'commercial\', \'suspended\', \'2026-10-06 11:47:42\', \'2026-10-06 11:47:42\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'commercial\', \'suspended\', \'2026-10-06 11:47:42\', \'2026-10-06 11:47:42\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'commercial\', \'suspended\', \'2026-10-06 11:47:42\', \'2026-10-06 11:47:42\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 11:47:47 --> mysqli_sql_exception: Duplicate entry 'EC-2024-0026' for key 'account_number' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `cu...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cu...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cu...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cu...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP\htdocs\electric_demo\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(164): CodeIgniter\Model->insert(Array)
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#10 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-10-06 11:47:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'EC-2024-0026' for key 'account_number'
+[Method: POST, Route: accounts/update/27]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 11:47:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'EC-2024-0026' for key 'account_number'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'commercial\', \'suspended\', \'2026-10-06 11:47:47\', \'2026-10-06 11:47:47\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'commercial\', \'suspended\', \'2026-10-06 11:47:47\', \'2026-10-06 11:47:47\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 11:47:47 --> [Caused by] mysqli_sql_exception: Duplicate entry 'EC-2024-0026' for key 'account_number'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'commercial\', \'suspended\', \'2026-10-06 11:47:47\', \'2026-10-06 11:47:47\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'commercial\', \'suspended\', \'2026-10-06 11:47:47\', \'2026-10-06 11:47:47\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'commercial\', \'suspended\', \'2026-10-06 11:47:47\', \'2026-10-06 11:47:47\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 11:47:59 --> mysqli_sql_exception: Duplicate entry 'EC-2024-0026' for key 'account_number' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `cu...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cu...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cu...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cu...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP\htdocs\electric_demo\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(164): CodeIgniter\Model->insert(Array)
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#10 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-10-06 11:47:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'EC-2024-0026' for key 'account_number'
+[Method: POST, Route: accounts/update/27]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 11:47:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'EC-2024-0026' for key 'account_number'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:47:58\', \'2026-10-06 11:47:58\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:47:58\', \'2026-10-06 11:47:58\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 11:47:59 --> [Caused by] mysqli_sql_exception: Duplicate entry 'EC-2024-0026' for key 'account_number'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:47:58\', \'2026-10-06 11:47:58\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:47:58\', \'2026-10-06 11:47:58\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:47:58\', \'2026-10-06 11:47:58\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 11:48:02 --> mysqli_sql_exception: Duplicate entry 'EC-2024-0026' for key 'account_number' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `cu...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cu...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cu...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cu...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP\htdocs\electric_demo\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(164): CodeIgniter\Model->insert(Array)
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#10 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-10-06 11:48:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'EC-2024-0026' for key 'account_number'
+[Method: POST, Route: accounts/update/27]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 11:48:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'EC-2024-0026' for key 'account_number'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:48:02\', \'2026-10-06 11:48:02\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:48:02\', \'2026-10-06 11:48:02\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 11:48:02 --> [Caused by] mysqli_sql_exception: Duplicate entry 'EC-2024-0026' for key 'account_number'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:48:02\', \'2026-10-06 11:48:02\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:48:02\', \'2026-10-06 11:48:02\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:48:02\', \'2026-10-06 11:48:02\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 11:48:12 --> mysqli_sql_exception: Duplicate entry 'EC-2024-0026' for key 'account_number' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `cu...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cu...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cu...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cu...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP\htdocs\electric_demo\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(164): CodeIgniter\Model->insert(Array)
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#10 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-10-06 11:48:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'EC-2024-0026' for key 'account_number'
+[Method: POST, Route: accounts/update/27]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 11:48:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'EC-2024-0026' for key 'account_number'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'commercial\', \'inactive\', \'2026-10-06 11:48:11\', \'2026-10-06 11:48:11\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'commercial\', \'inactive\', \'2026-10-06 11:48:11\', \'2026-10-06 11:48:11\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 11:48:12 --> [Caused by] mysqli_sql_exception: Duplicate entry 'EC-2024-0026' for key 'account_number'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'commercial\', \'inactive\', \'2026-10-06 11:48:11\', \'2026-10-06 11:48:11\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'commercial\', \'inactive\', \'2026-10-06 11:48:11\', \'2026-10-06 11:48:11\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'commercial\', \'inactive\', \'2026-10-06 11:48:11\', \'2026-10-06 11:48:11\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 11:48:33 --> mysqli_sql_exception: Duplicate entry 'EC-2024-0026' for key 'account_number' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `cu...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cu...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cu...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cu...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP\htdocs\electric_demo\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(164): CodeIgniter\Model->insert(Array)
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#10 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-10-06 11:48:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'EC-2024-0026' for key 'account_number'
+[Method: POST, Route: accounts/update/27]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 11:48:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'EC-2024-0026' for key 'account_number'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:48:33\', \'2026-10-06 11:48:33\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:48:33\', \'2026-10-06 11:48:33\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 11:48:33 --> [Caused by] mysqli_sql_exception: Duplicate entry 'EC-2024-0026' for key 'account_number'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:48:33\', \'2026-10-06 11:48:33\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:48:33\', \'2026-10-06 11:48:33\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:48:33\', \'2026-10-06 11:48:33\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 11:49:24 --> mysqli_sql_exception: Duplicate entry 'EC-2024-0026' for key 'account_number' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `cu...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cu...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cu...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cu...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP\htdocs\electric_demo\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(164): CodeIgniter\Model->insert(Array)
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#10 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-10-06 11:49:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'EC-2024-0026' for key 'account_number'
+[Method: POST, Route: accounts/update/27]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 11:49:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'EC-2024-0026' for key 'account_number'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:49:24\', \'2026-10-06 11:49:24\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:49:24\', \'2026-10-06 11:49:24\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 11:49:24 --> [Caused by] mysqli_sql_exception: Duplicate entry 'EC-2024-0026' for key 'account_number'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:49:24\', \'2026-10-06 11:49:24\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:49:24\', \'2026-10-06 11:49:24\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'123 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'residential\', \'active\', \'2026-10-06 11:49:24\', \'2026-10-06 11:49:24\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 11:49:35 --> mysqli_sql_exception: Duplicate entry 'EC-2024-0026' for key 'account_number' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `cu...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cu...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cu...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cu...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP\htdocs\electric_demo\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(164): CodeIgniter\Model->insert(Array)
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#10 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-10-06 11:49:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'EC-2024-0026' for key 'account_number'
+[Method: POST, Route: accounts/update/27]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 11:49:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'EC-2024-0026' for key 'account_number'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'133 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'industrial\', \'inactive\', \'2026-10-06 11:49:35\', \'2026-10-06 11:49:35\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'133 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'industrial\', \'inactive\', \'2026-10-06 11:49:35\', \'2026-10-06 11:49:35\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 11:49:35 --> [Caused by] mysqli_sql_exception: Duplicate entry 'EC-2024-0026' for key 'account_number'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'133 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'industrial\', \'inactive\', \'2026-10-06 11:49:35\', \'2026-10-06 11:49:35\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'133 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'industrial\', \'inactive\', \'2026-10-06 11:49:35\', \'2026-10-06 11:49:35\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grande\', \'133 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'industrial\', \'inactive\', \'2026-10-06 11:49:35\', \'2026-10-06 11:49:35\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-06 11:49:51 --> mysqli_sql_exception: Duplicate entry 'EC-2024-0026' for key 'account_number' in D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\XAMPP\htdocs\electric_demo\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `cu...', 0)
+#1 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cu...')
+#2 D:\XAMPP\htdocs\electric_demo\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cu...')
+#3 D:\XAMPP\htdocs\electric_demo\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cu...', Array, false)
+#4 D:\XAMPP\htdocs\electric_demo\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP\htdocs\electric_demo\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP\htdocs\electric_demo\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\XAMPP\htdocs\electric_demo\app\Controllers\Accounts.php(164): CodeIgniter\Model->insert(Array)
+#8 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+#9 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+#10 D:\XAMPP\htdocs\electric_demo\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPP\htdocs\electric_demo\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 D:\XAMPP\htdocs\electric_demo\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\XAMPP\htdocs\electric_demo\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-10-06 11:49:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'EC-2024-0026' for key 'account_number'
+[Method: POST, Route: accounts/update/27]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 11:49:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'EC-2024-0026' for key 'account_number'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grander\', \'133 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'industrial\', \'inactive\', \'2026-10-06 11:49:51\', \'2026-10-06 11:49:51\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grander\', \'133 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'industrial\', \'inactive\', \'2026-10-06 11:49:51\', \'2026-10-06 11:49:51\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-06 11:49:51 --> [Caused by] mysqli_sql_exception: Duplicate entry 'EC-2024-0026' for key 'account_number'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grander\', \'133 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'industrial\', \'inactive\', \'2026-10-06 11:49:51\', \'2026-10-06 11:49:51\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grander\', \'133 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'industrial\', \'inactive\', \'2026-10-06 11:49:51\', \'2026-10-06 11:49:51\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (\'EC-2024-0026\', \'Ariana Grander\', \'133 P. Paredes St. Sampaloc, Manila\', \'555- 0126\', \'grandeariana@gmail.com\', \'MTR-026\', \'industrial\', \'inactive\', \'2026-10-06 11:49:51\', \'2026-10-06 11:49:51\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `customer_accounts` (`account_number`, `customer_name`, `address`, `phone`, `email`, `meter_number`, `connection_type`, `status`, `created_at`, `updated_at`) VALUES (:account_number:, :customer_name:, :address:, :phone:, :email:, :meter_number:, :connection_type:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Accounts.php(164): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Accounts->update('27')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accounts))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
